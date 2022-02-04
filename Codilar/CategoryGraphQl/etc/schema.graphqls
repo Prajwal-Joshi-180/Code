@@ -1,0 +1,8 @@
+type Query {
+    categorycollection (
+        id: Int @doc(description: "Id of the category")
+    ): CategoryTree @resolver(class: "Codilar\\CategoryGraphQl\\Model\\Resolver\\CategorysResolver") @doc(description: "The category collection query returns information about  category")
+}
+type categorycollection @doc(description: "categorycollection  defines the name and other related details") {
+    id : Int
+}

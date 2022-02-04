@@ -1,0 +1,29 @@
+<?php
+/**
+ * @var \Codilar\Employee\Block\View $block
+ */
+$employee = $block->getEmployees()
+?>
+<div class="employee-listing">
+    <h1> Employee Details</h1>
+    <form method="POST" action="<?php echo $block->getViewUrl();?>">
+    <input type="submit" value="Back" name="Back" style="background-color:#514943; color:white;">
+    </form>
+    <table>
+            <tr>
+                <th><?php echo __('Name') ?></th>
+                <th><?php echo __('Email') ?></th>
+                <th><?php echo __('Mobile') ?></th>
+                <th><?php echo __('Date of Birth') ?></th>
+                <th><?php echo __('Address') ?></th>
+                <th><?php echo __('Date of Joining') ?></th>
+            </tr>
+                <tr>
+                    <td><?php echo $employee->getName() ?></td>
+                    <td><?php echo $employee->getEmail() ?></td>
+                    <td><?php echo $employee->getMobile() ?></td>
+                    <td><?php echo $employee->getDob() ?></td>
+                    <td><?php echo $employee->getAddress() ?></td>
+                    <td><?php echo $employee->getDoj() ?></td>
+                </tr>
+    </table>
